@@ -11,9 +11,54 @@
 		<div class="text-right">
 			<h1>Flappy Cave</h1>
 			<p>Flappy Cave is like Flappy Bird, except you are flapping in a cave instead of outside. This makes the game much easier! It's also the first game I made in PICO-8, so don't expect too much!</p>
-			<a href="list.html">Download</a>
+			<button id="flappycavemodalopen">Download / Play</button>
 		</div>
 		<img class="image-left" src="images/flappycave.png">
 	</div>
+
+	<div id="flappycavemodal" class="modal">
+
+    <div class="modal-content">
+		<span class="close">&times;</span>
+		<h1 class="modaltext">Play Flappy Cave</h1>
+		<button onclick="window.open('games/flappycave/flappycave.html','_blank')">Open game in new window</button>
+		<iframe src="games/flappycave/flappycave.html"></iframe>
+		<h1 class="modaltext">Download Flappy Cave</h1>
+		<a href="games/flappycave/FlappyCave-Windows.zip" download>Download for Windows</a>
+		<br>
+		<a href="games/flappycave/FlappyCave.app.zip" download>Download for MacOS</a>
+		<br>
+		<a href="games/flappycave/FlappyCave-Linux.zip" download>Download for Linux</a>
+    </div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("flappycavemodal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("flappycavemodalopen");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+	</script>
+
+</div>
 </body>
 </html>
