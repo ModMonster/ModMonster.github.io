@@ -21,6 +21,7 @@ body {
 .image-right {
     position: absolute;
 	top: 10%;
+	left: 60%;
 }
 .image-left {
     position: absolute;
