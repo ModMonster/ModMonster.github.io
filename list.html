@@ -3,32 +3,40 @@
 <head>
 	<link rel="stylesheet" href="list.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-	<title>Game List - ModMonster's PICO-8 Game Repository</title>
+	<title>Game List - ModMonster's Game Repository</title>
 </head>
 <body background="listbg.png">
-	<h1 align="center">ModMonster's PICO-8 Game Repository</h1>
-	<div class="game">
-		<div class="text-right">
-			<h1>Flappy Cave</h1>
-			<p>Flappy Cave is like Flappy Bird, except you are flapping in a cave instead of outside. This makes the game much easier! It's also the first game I made in PICO-8, so don't expect too much!</p>
-			<button id="flappycavemodalopen">Download / Play</button>
-		</div>
-		<img class="image-left" src="images/flappycave.png">
-	</div>
+	<h1 align="center">ModMonster's Game Repository</h1>
 	<div class="game">
 		<div class="text-left">
+			<h1>Prison Break</h1>
+			<p>Prison Break is a short game that I made with Bitsy where you try to escape a prison! It's pretty simple, and there's not even a way to lose!</p>
+			<button id="prisonbreakmodalopen">Play</button>
+		</div>
+		<img class="image-right" src="images/prisonbreak.png">
+	</div>
+	<div class="game">
+		<div class="text-right">
 			<h1>Lander</h1>
 			<p>Lander is a game where you try to land a UFO on a landing pad. You need to make sure that you land in the center of the pad, as well as making sure that you don't hit it too hard.</p>
 			<button id="landermodalopen">Download / Play</button>
 		</div>
-		<img class="image-right" src="images/lander.png">
+		<img class="image-left" src="images/lander.png">
+	</div>
+	<div class="game">
+		<div class="text-left">
+			<h1>Flappy Cave</h1>
+			<p>Flappy Cave is like Flappy Bird, except you are flapping in a cave instead of outside. This makes the game much easier! It's also the first game I made in PICO-8, so don't expect too much!</p>
+			<button id="flappycavemodalopen">Download / Play</button>
+		</div>
+		<img class="image-right" src="images/flappycave.png">
 	</div>
 
 	<div id="flappycavemodal" class="modal">
 		<div class="modal-content">
 			<span id="flappycaveclose" class="close">&times;</span>
 			<h1 class="modaltext">Play Flappy Cave</h1>
-			<button onclick="window.open('games/flappycave/flappycave.html','_blank')">Open game in new window</button>
+			<button class="modal-button" onclick="window.open('games/flappycave/flappycave.html','_blank')">Open game in new window</button>
 			<iframe src="games/flappycave/flappycave.html"></iframe>
 			<h1 class="modaltext">Download Flappy Cave</h1>
 			<a href="games/flappycave/FlappyCave-Windows.zip" download>Download for Windows</a>
@@ -36,6 +44,7 @@
 			<a href="games/flappycave/FlappyCave.app.zip" download>Download for MacOS</a>
 			<br>
 			<a href="games/flappycave/FlappyCave-Linux.zip" download>Download for Linux</a>
+			<h4 class="modaltext">Made with PICO-8</h4>
 		</div>
 	<script>
 		// Get the modal
@@ -65,12 +74,48 @@
 		}
 	</script>
 	</div>
-	
+
+	<div id="prisonbreakmodal" class="modal">
+		<div class="modal-content">
+			<span id="prisonbreakclose" class="close">&times;</span>
+			<h1 class="modaltext">Play Prison Break</h1>
+			<button class="modal-button" onclick="window.open('games/prisonbreak/prisonbreak.html','_blank')">Open game in new window</button>
+			<iframe src="games/prisonbreak/prisonbreak.html"></iframe>
+			<h4 class="modaltext">Made with Bitsy</h4>
+		</div>
+	<script>
+		// Get the modal
+		var prisonbreakmodal = document.getElementById("prisonbreakmodal");
+
+		// Get the button that opens the modal
+		var prisonbreakbtn = document.getElementById("prisonbreakmodalopen");
+
+		// Get the <span> element that closes the modal
+		var prisonbreakspan = document.getElementById("prisonbreakclose");
+
+		// When the user clicks the button, open the modal 
+		prisonbreakbtn.onclick = function() {
+		  prisonbreakmodal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		prisonbreakspan.onclick = function() {
+		  prisonbreakmodal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			prisonbreakmodal.style.display = "none";
+		  }
+		}
+	</script>
+	</div>
 	<div id="landermodal" class="modal">
 		<div class="modal-content">
 			<span id="landerclose" class="close">&times;</span>
 			<h1 class="modaltext">Play Lander</h1>
-			<button onclick="window.open('games/lander/lander.html','_blank')">Open game in new window</button>
+			<button class="modal-button" onclick="window.open('games/lander/lander.html','_blank')">Open game in new window</button>
 			<iframe src="games/lander/lander.html"></iframe>
 			<h1 class="modaltext">Download Lander</h1>
 			<a href="games/lander/Lander-Windows.zip" download>Download for Windows</a>
@@ -78,6 +123,7 @@
 			<a href="games/lander/Lander.app.zip" download>Download for MacOS</a>
 			<br>
 			<a href="games/lander/Lander-Linux.zip" download>Download for Linux</a>
+			<h4 class="modaltext">Made with PICO-8</h4>
 		</div>
 	<script>
 		// Get the modal
