@@ -1,1 +1,14 @@
-W.I.P.
+timer - Counts down for a specific length of time.
+Usage: timer <time>
+
+Starts a timer instance with the specified length of time. Within this instance you can press enter to stop and start the timer, or type exit to return to Mish. The timer will beep when it's done.
+
+You can use the following units of time:
+	s - seconds
+	m - minutes
+	h - hours
+	d - days
+
+EXAMPLES:
+	timer 9s
+		Starts a timer which will last 9 seconds.
