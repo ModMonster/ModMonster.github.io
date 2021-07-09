@@ -1,0 +1,4 @@
+stopwatch - Records a period of time.
+Usage: stopwatch
+
+Starts a stopwatch instance. Within this instance you can press enter to stop and start the stopwatch, reset to reset, and exit to return to Mish.

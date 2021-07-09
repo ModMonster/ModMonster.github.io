@@ -1,0 +1,10 @@
+calc - Calculates math equations.
+Usage: calc <command>
+
+Calculates the answer to a math problem you specify. Must use standard Python operations.
+
+EXAMPLES
+    calc 1+1
+        Returns 2.
+    calc 76*12/7**4
+        Returns 0.3798417326114119.
