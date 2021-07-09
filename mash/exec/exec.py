@@ -1,4 +1,4 @@
-# 1.0.0
+# 1.1.0
 import os
 
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +39,10 @@ if (len(args) >= 2):
 
         # is destination a directory?
         if (os.path.exists(root + newDir)):
-            os.system("start " + root + newDir)
+            if (os.name == "nt"):
+                os.system("start " + root + newDir)
+            else:
+                os.system("gedit " + root + newDir)
         else:
             print("Specified file doesn't exist.")
     else:
