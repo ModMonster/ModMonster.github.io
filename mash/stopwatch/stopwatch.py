@@ -1,7 +1,8 @@
-# 1.0.0
+# 1.1.0
 import os
 import time
 import threading
+import math
 
 # Clear screen
 if (os.name == "nt"):
@@ -21,8 +22,8 @@ def Timer():
         if (not paused):
             cls()
             print("Press enter to stop and start. Type reset to reset and exit to exit. \n")
-            print(elapsed)
-            print("\n\n")
+            formattedElapsed = str(math.floor(elapsed / 3600) % 60) + ":" + str(math.floor(elapsed / 60) % 60).zfill(2) + ":" + str(elapsed % 60).zfill(2)
+            print(formattedElapsed)
 
             elapsed += 1
         time.sleep(1)
