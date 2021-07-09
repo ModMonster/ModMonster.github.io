@@ -3,7 +3,11 @@ import os
 import time
 import threading
 
-cls = lambda: os.system('cls') # Clear screen
+# Clear screen
+if (os.name == "nt"):
+    cls = lambda: os.system('cls')
+else:
+    cls = lambda: os.system('clear')
 
 command = ""
 elapsed = 0
