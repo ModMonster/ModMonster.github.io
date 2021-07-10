@@ -65,6 +65,6 @@ if (len(args) >= 2):
             else:
                 print("Specified path doesn't exist.")
     else:
-        print("You need to specify a directory to change to.")
+        print("You need to specify a file or directory to list the size of.")
 else:
-    print("You need to specify a directory to change to.")
+    print("You need to specify a file or directory to list the size of")
