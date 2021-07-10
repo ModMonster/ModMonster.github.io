@@ -1,0 +1,14 @@
+size - Show size of files
+Usage: size <path>
+
+Shows the size of a specified file, or the size of all files inside a directory. You can use a relative path or an absolute path.
+
+EXAMPLES
+    size /file.txt
+        Shows the size of file.txt, which is in the root of the filesystem.
+    size /home/file.txt
+        Shows the size of file.txt, which is in the home directory, which is in the root of the filesystem.
+    size file.txt
+        Shows the size of file.txt, which is inside of the current directory.
+    size /home
+	Shows the size of all of the files in the home directory combined.
