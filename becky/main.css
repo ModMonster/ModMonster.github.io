@@ -31,3 +31,12 @@ th, td {
 th {
     background-color: lightgray;
 }
+
+new {
+    color: yellow;
+    font-weight: bold;
+}
+
+small {
+    font-size: 8px;
+}
