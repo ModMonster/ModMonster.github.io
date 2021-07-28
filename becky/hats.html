@@ -17,17 +17,50 @@
         <p>on sale now for the low low price of $26.99!</p>
 
         <h2>buy a silly hat</h2>
-        <form>
+        <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzx8t6d3zuxDgEQ2AXayLiNjZ_YkE0PpKqDcAH89kMoKvACOYBB/exec">
             <label for="name">Name</label><br>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" name="name" required><br><br>
             <label for="address">Address</label><br>
-            <input type="text" id="address" name="address"><br><br>
+            <input type="text" name="address" required><br><br>
             <label for="credit">Credit Card Number</label><br>
-            <input type="text" id="credit" name="credit"><br><br>
+            <input type="text" name="credit" required><br><br>
             <label for="count">Number of silly hats you want</label><br>
-            <input type="text" id="count" name="count"><br><br><br>
-            
-            <a href="boughtsillyhat.html">Submit</a>
+            <input type="text" name="count" required><br><br>
+            <label for="leftright">Are you left or right handed?</label><br><br>
+            <label for="leftright">Left handed</label>
+            <input type="radio" name="leftright"><br>
+            <label for="leftright">Right handed</label>
+            <input type="radio" name="leftright" checked="true"><br><br>
+            <label for="color">Select a color</label><br>
+            <select name="color" required>
+                <option>Red</option>
+                <option>Orange</option>
+                <option>Yellow</option>
+                <option>Lime Green</option>
+                <option>Green</option>
+                <option>Light Blue</option>
+                <option>Blue</option>
+                <option>Pink</option>
+                <option>Magenta</option>
+                <option>Purple</option>
+                <option>White</option>
+                <option>Black</option>
+            </select>
+
+            <br><br><br>
+            <input type="submit" value="buy">
+
+            <div style="display:none" class="thankyou_message">
+                <h1>you successfully bought silly hats</h1>
+                <p>they will arrive in 3-5 working days.</p>
+                <small>(whatever that means)</small>
+
+                <br><br><br>
+
+                <a href="index.html">woohoo</a>
+            </div>
         </form>
     </body>
 </html>
+
+<script data-cfasync="false" type="text/javascript" src="forms.js"></script>
