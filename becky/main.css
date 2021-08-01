@@ -1,4 +1,4 @@
-a:link {
+.button:link {
     background-color: lightgray;
     border-radius: 20px;
     padding: 10px;
@@ -6,7 +6,7 @@ a:link {
     text-decoration: none;
 }
 
-a:hover {
+.button:hover {
     background-color: grey;
     border-radius: 20px;
     padding: 10px;
@@ -43,4 +43,8 @@ small {
 
 .container {
     height: 80%;
+}
+
+.powr-poll {
+    align-self: flex-start;
 }
