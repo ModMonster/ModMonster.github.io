@@ -1,0 +1,12 @@
+yt - Plays YouTube videos and audio.
+Usage: yt (video/audio) (volume <percent>) <search term>
+
+Plays the first result for the search term found on YouTube.
+
+EXAMPLES
+    yt
+	Opens the guided player. (Good for beginners)
+    yt video ModMonster
+	Plays the first result for the search "ModMonster" as a video
+    yt volume 40 audio ModMonster
+	Plays the first result for the search "ModMonster" at 40% volume, with audio only.
