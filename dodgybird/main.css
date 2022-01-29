@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+/* Background */
+
+body {
+    margin: 0px;
+}
+
+.bg-image {
+    background-image: url("screenshot.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Title */
+
+.title {
+    font-size: 72px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    top: -40px;
+}
+
+.headings {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Button Divs */
+
+.buttons {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-button {
+    float: left;
+    width: 256px;
+    padding: 8px;
+}
+
+.download-modal-open-button {
+    float: right;
+    width: 256px;
+    padding: 8px;
+}
+
+/* Buttons */
+
+.main-button {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #E5E5E5;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.main-button:disabled {
+    pointer-events: none;
+}
+
+.main-button:hover {
+    color: #000000;
+    background-color: #E5E5E5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.main-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Download Button */
+
+.download-button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E5E5;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.download-button:disabled {
+    pointer-events: none;
+}
+
+.download-button:hover {
+    color: #FFFFFF;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.download-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Download Modal */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 20px 32px;
+}
+  
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+  
+/* Modal Content */
+.download-modal-content {
+    position: relative;
+    background-color: #1A1A1A;
+    margin: auto;
+    padding: 0;
+    border: 2px solid #292929;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 32px;
+}
+  
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* Modal Style */
+
+.download-modal-heading {
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Download Table */
+
+.download-table {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-collapse: collapse;
+    width: 90%;
+    height: 60%;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+}
+
+.download-table th, td {
+    border: 1px solid #AAAAAA;
+    padding: 16px;
+}
+
+.download-table td {
+    font-weight: 300;
+}
