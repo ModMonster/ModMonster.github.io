@@ -18,6 +18,7 @@ body {
 
 .title {
     font-size: 72px;
+    top: -100px;
 }
 
 .subtitle {
