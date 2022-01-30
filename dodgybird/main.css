@@ -238,11 +238,60 @@ body {
     border-radius: 10px;
 }
 
-.download-table th, td {
+.download-table th:not(.no-border), td:not(.no-border) {
     border: 1px solid #AAAAAA;
     padding: 16px;
 }
 
 .download-table td {
     font-weight: 300;
+}
+
+/* Info tooltips */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    border: 1px solid #E5E5E5;
+    font-weight: 500;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+
+    width: 256px;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -128px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
 }

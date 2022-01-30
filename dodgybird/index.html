@@ -2,6 +2,7 @@
     <title>Dodgy Bird</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/ccd21e5e19.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Background Image -->
@@ -34,40 +35,65 @@
             <div class="modal-body">
                 <table class="download-table">
                     <tr>
+                        <th class="no-border"></th>
                         <th>Download</th>
                         <th>Operating System</th>
-                        <th>Filename</th>
+                        <th>Size</th>
                         <th>Architecture</th>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="windows-download-button">
-                                <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-Windows-1.0.0.zip')">Download</button>
+                        <td class="no-border">
+                            <div class="tooltip"><i class="fas fa-info-circle fa-2x"></i>
+                                <span class="tooltiptext">Extract the .zip file and run DodgyBird.exe</span>
                             </div>
                         </td>
+                        <td>
+                            <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-Windows-1.0.0.zip')">Download</button>
+                        </td>
                         <td>Windows</td>
-                        <td>DodgyBird-Windows-v1.0.0.zip</td>
+                        <td>73.8 MB</td>
                         <td>64 bit</td>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="windows-download-button">
-                                <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-macOS-1.0.0.zip')">Download</button>
+                        <td class="no-border">
+                            <div class="tooltip"><i class="fas fa-info-circle fa-2x"></i>
+                                <span class="tooltiptext">Extract the .zip file and open DodgyBird.app</span>
                             </div>
                         </td>
+                        <td>
+                            <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-macOS-1.0.0.zip')">Download</button>
+                        </td>
                         <td>macOS</td>
-                        <td>DodgyBird-macOS-v1.0.0.zip</td>
+                        <td>95.3 MB</td>
                         <td>64 bit / Apple silicon</td>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="windows-download-button">
-                                <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-Linux-1.0.0.zip')">Download</button>
+                        <td class="no-border">
+                            <div class="tooltip"><i class="fas fa-info-circle fa-2x"></i>
+                                <span class="tooltiptext">Extract the .zip file and run DodgyBird.x86_64</span>
                             </div>
                         </td>
+                        <td>
+                            <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-Linux-1.0.0.zip')">Download</button>
+                        </td>
                         <td>Linux</td>
-                        <td>DodgyBird-Linux-v1.0.0.zip</td>
+                        <td>115 MB</td>
                         <td>64 bit</td>
+                    </tr>
+                    <tr>
+                        <td class="no-border">
+                            <div class="tooltip"><i class="fas fa-info-circle fa-2x"></i>
+                                <span class="tooltiptext">Open the .apk file and give it permission to install.</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="windows-download-button">
+                                <button class="download-button" role="button" onclick="window.open('downloads/DodgyBird-Android-1.0.0.apk')">Download</button>
+                            </div>
+                        </td>
+                        <td>Android</td>
+                        <td>27.6 MB</td>
+                        <td>N/A</td>
                     </tr>
                 </table>
             </div>
