@@ -17,7 +17,9 @@ body {
 /* Title */
 
 .title {
+    display: inline-block;
     font-size: 72px;
+    animation: fadeIn linear 1s;
 }
 
 .subtitle {
@@ -25,6 +27,14 @@ body {
     font-weight: 300;
     position: relative;
     top: -40px;
+    animation: fadeIn linear 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
 
 .headings {
