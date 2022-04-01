@@ -11,7 +11,7 @@ function onNext() {
     sessionStorage.setItem("avatar", inputAvatar);
     sessionStorage.setItem("background", inputBackground);
 
-    window.location.href = "/form-socials.html";
+    window.location.href = "form-socials.html";
 }
 
 function onBack() {
