@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Generate - Linker</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import css-->
+        <link type="text/css" rel="stylesheet" href="materialize.css"  media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="main.css" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body onload="onSocialLoad()">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">&nbsp&nbspLinker Generator</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="active"><a href="/">Generate</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <form class="col s12" name="socials">
+                <div class="input-field col s12">
+                    <input id="facebook" type="text">
+                    <label for="facebook" id="label-facebook">Facebook</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="twitter" type="text">
+                    <label for="twitter" id="label-twitter">Twitter</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="instagram" type="text">
+                    <label for="instagram" id="label-instagram">Instagram</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="pinterest" type="text">
+                    <label for="pinterest" id="label-pinterest">Pinterest</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="tiktok" type="text">
+                    <label for="tiktok" id="label-tiktok">TikTok</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="reddit" type="text">
+                    <label for="reddit" id="label-reddit">Reddit</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="steam" type="text">
+                    <label for="steam" id="label-steam">Steam</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="twitch" type="text">
+                    <label for="twitch" id="label-twitch">Twitch</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="youtube" type="text">
+                    <label for="youtube" id="label-youtube">YouTube</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="xbox" type="text">
+                    <label for="xbox" id="label-xbox">Xbox</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="psn" type="text">
+                    <label for="psn" id="label-psn">PSN</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="github" type="text">
+                    <label for="github" id="label-github">GitHub</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="nav-next">
+            <a class="waves-effect waves-light btn" onclick="onBack()"><i class="material-icons left">chevron_left</i>Back</a>
+            <a class="waves-effect waves-light btn" onclick="generateUrl()"><i class="material-icons right">chevron_right</i>Generate</a>
+        </div>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>

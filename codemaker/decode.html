@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Decode - Code Generator</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <ul class="navbar">
+            <a href="encode.html">
+                <img src="favicon.png" height="40px">
+                <h1>Code Generator</h1>
+            </a>
+            <li><a href="encode.html">Encode</a></li>
+            <li class="nav-active"><a href="decode.html">Decode</a></li>
+            <li class="float-right"><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="content-div">
+            <form id="decodeform" onsubmit="event.preventDefault(); decode();">
+                <label for="string">Encrypted text to decode:</label>
+                <input type="text" id="string" name="string">
+                <label for="key">Encryption key:</label>
+                <input type="text" id="key" name="key">
+                <input type="submit" value="Decode!">
+            </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

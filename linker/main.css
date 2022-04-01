@@ -1,0 +1,16 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#preview-img {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin: 16px;
+    border-radius: 32px;
+}
+
+.nav-next {
+    padding: 16px;
+}

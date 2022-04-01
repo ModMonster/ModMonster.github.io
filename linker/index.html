@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Generate - Linker</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import css-->
+        <link type="text/css" rel="stylesheet" href="materialize.css"  media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="main.css" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body onload="onDetailLoad()">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">&nbsp&nbspLinker Generator</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="active"><a href="/">Generate</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <form class="col s12" name="detail">
+                <div class="row">
+                    <div class="input-field col s6">
+                    <input id="name" type="text">
+                    <label for="name" id="label-name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                    <input id="avatar" type="text">
+                    <label for="avatar" id="label-avatar">Avatar URL</label>
+                    </div>
+                </div>
+                <p>Background</p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="background" type="radio" id="bg-stars" onclick="backgroundPreviewUpdate()" />
+                        <span>Stars</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="background" type="radio" id="bg-tetris" onclick="backgroundPreviewUpdate()" />
+                        <span>Tetris</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="background" type="radio" id="bg-squares" onclick="backgroundPreviewUpdate()" />
+                        <span>Squares</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="background" type="radio" id="bg-night-sky" onclick="backgroundPreviewUpdate()" />
+                        <span>Night Sky</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="background" type="radio" id="bg-random" onclick="backgroundPreviewUpdate()" checked />
+                        <span>Random</span>
+                    </label>
+                </p>
+                <img id="preview-img" src="backgrounds/bg-random.gif" width="40%">
+            </form>
+        </div>
+
+        <div class="nav-next">
+            <a class="waves-effect waves-light btn disabled"><i class="material-icons left">chevron_left</i>Back</a>
+            <a class="waves-effect waves-light btn" onclick="onNext()"><i class="material-icons right">chevron_right</i>Next</a>
+        </div>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
