@@ -145,7 +145,7 @@ function toggleQuestionCheckbox(id) {
 }
 
 function createUrl() {
-    var url = "https://kablook.nicholasstraete.repl.co/host";
+    var url = "https://modmonster.github.io/kablook/host";
     
     addedCount = 0;
 
