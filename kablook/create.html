@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Create a Kablook</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/create.css">
+    </head>
+    <body>
+        <div class="title-bar">
+            <input type="text" id="title" placeholder="Untitled Kablook" name="title">
+            <button class="button float-right" role="button" onclick="createUrl()">Done</button>
+            <button class="button float-right" role="button" onclick="loadFromUrl()">Load from URL</button>
+        </div>
+
+        <div class="questions-bar">
+            <div id="questions"></div>
+            <button class="button add-question-button" onclick="newQuestion()">Add Question</button>
+        </div>
+
+        <div class="question-window">
+            <input id="question-window-title" oninput="updateTitle()" placeholder="New question"></input>
+
+            <div class="question-buttons">
+                <div class="question-window-button" id="red">
+                    <img src="images/triangle.png">
+                    <textarea oninput="updateOptions()" placeholder="Option 1"></textarea>
+                    <div class="question-checkbox">
+                        <img src="images/check.png">
+                    </div>
+                    <input type="checkbox" onclick="updateOptions(); toggleQuestionCheckbox('red');">
+                </div>
+                <div class="question-window-button" id="blue">
+                    <img src="images/diamond.png">
+                    <textarea oninput="updateOptions()" placeholder="Option 2"></textarea>
+                    <div class="question-checkbox">
+                        <img src="images/check.png">
+                    </div>
+                    <input type="checkbox" onclick="updateOptions(); toggleQuestionCheckbox('blue');">
+                </div>
+                <div class="question-window-button" id="yellow">
+                    <img src="images/circle.png">
+                    <textarea oninput="updateOptions()" placeholder="Option 3"></textarea>
+                    <div class="question-checkbox">
+                        <img src="images/check.png">
+                    </div>
+                    <input type="checkbox" onclick="updateOptions(); toggleQuestionCheckbox('yellow');">
+                </div>
+                <div class="question-window-button" id="green">
+                    <img src="images/square.png">
+                    <textarea oninput="updateOptions()" placeholder="Option 4"></textarea>
+                    <div class="question-checkbox">
+                        <img src="images/check.png">
+                    </div>
+                    <input type="checkbox" onclick="updateOptions(); toggleQuestionCheckbox('green');">
+                </div>
+            </div>
+        </div>
+
+        <div class="options-bar">
+            <div class="options-bar-selector">
+                <p>Time limit</p>
+                <select name="time-limit" id="time-limit-dropdown" onchange="updateTimer()">
+                    <option value="5s">5 seconds</option>
+                    <option value="10s">10 seconds</option>
+                    <option value="20s">20 seconds</option>
+                    <option value="30s" selected>30 seconds</option>
+                    <option value="45s">45 seconds</option>
+                    <option value="1m">1 minute</option>
+                    <option value="2m">2 minutes</option>
+                </select>
+            </div>
+            <div class="options-bar-buttons">
+                <button class="button" onclick="deleteQuestion()">Delete</button>
+                <button class="button" onclick="duplicateQuestion()">Duplicate</button>
+            </div>
+        </div>
+        
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="js/create.js"></script>
+    </body>
+</html>

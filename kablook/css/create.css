@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    position: relative;
+    z-index: -1000;
+    font-family: "Radio Canada";
+}
+
+#title {
+    font-family: "Alfa Slab One";
+    font-weight: normal;
+    font-size: 24px;
+    padding: 6px 12px;
+    border: none;
+    border-bottom: 2px solid;
+    transition: width 300ms;
+    outline: none;
+    width: 512px;
+}
+
+#title:focus {
+    border-bottom: 3px solid;
+    width: 564px;
+}
+
+.title-bar {
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    height: 48px;
+}
+
+.float-right {
+    margin-left: 16px;
+    float: right;
+}
+
+.questions-bar {
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    height: calc(100% - 96px);
+    width: 256px;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#questions::-webkit-scrollbar {
+    display: none;
+}
+
+#questions {
+    overflow-y: auto;
+    height: 90%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: 0;  /* Firefox */
+}
+
+.add-question-button {
+    position: absolute;
+    bottom: 10px;
+    left: 16px;
+    width: 256px;
+}
+
+.question-button {
+    align-items: center;
+    appearance: none;
+    background-color: lightgray;
+    border-radius: 4px;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: inherit;
+    font-family: inherit;
+    height: 48px;
+    justify-content: left;
+    margin-bottom: 16px;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    width: 100%;
+}
+
+.question-button:hover {
+    background-color: #496a81;
+    color: white;
+}
+
+.selected-question-button {
+    background-color: #2b3a67;
+    color: white;
+}
+
+.selected-question-button:hover {
+    background-color: #2b3a67;
+}
+
+.question-window {
+    position: absolute;
+    left: 288px;
+    padding: 16px;
+    color: black;
+    z-index: -2;
+    width: calc(100% - 656px);
+    height: calc(100% - 104px);
+}
+
+#question-window-title {
+    width: calc(100% - 128px);
+    text-align: center;
+    margin: 80px 64px;
+    font-size: 64px;
+    font-family: "Radio Canada";
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid black;
+    transition: 100ms;
+}
+
+.question-buttons {
+    position: absolute;
+    width: calc(100% - 32px);
+    height: calc(100% - 270px);
+}
+
+.question-window-button {
+    margin: 16px;
+    position: absolute;
+    width: calc(50% - 64px);
+    height: calc(50% - 64px);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.question-window-button textarea {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 192px);
+    left: 96px;
+    transform: translate(0, -50%);
+    height: 50%;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "Radio Canada";
+    font-size: 24px;
+}
+
+.question-window-button textarea::placeholder {
+    color: lightgray;
+}
+
+.question-window-button input[type=checkbox] {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translate(0, -50%);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    appearance: none;
+}
+
+.question-window-button .question-checkbox {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translate(0, -50%);
+    width: 32px;
+    height: 32px;
+    background-color: rgba(85, 188, 30, 0);
+    border: 3px solid white;
+    border-radius: 8px;
+    transition: 300ms;
+}
+
+.question-window-button .question-checkbox-checked {
+    background-color: rgb(85, 188, 30);
+}
+
+.question-window-button .question-checkbox * {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 5px;
+    top: 16px;
+    display: none;
+}
+
+.question-window-button .question-checkbox-checked * {
+    display: inline-block;
+}
+
+.question-window-button img {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translate(0, -50%);
+    width: 32px;
+    height: 32px;
+}
+
+#red {
+    background-color: #e3193d;
+    top: 0;
+    left: 0;
+}
+
+#blue {
+    background-color: #1667ce;
+    top: 0;
+    left: 50%;
+}
+
+#yellow {
+    background-color: #d99e00;
+    top: 50%;
+    left: 0;
+}
+
+#green {
+    background-color: #28880b;
+    top: 50%;
+    left: 50%;
+}
+
+.options-bar {
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    height: calc(100% - 96px);
+    width: 304px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.options-bar-buttons {
+    position: absolute;
+    bottom: 8px;
+    width: calc(100% - 32px);
+}
+
+.options-bar-buttons button {
+    width: calc(50% - 2px);
+}
+
+.options-bar-selector {
+    width: calc(100% - 16px);
+    height: 128px;
+    padding: 4px 8px;
+    color: black;
+}
+
+.options-bar-selector select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid grey;
+    outline: 1px solid grey;
+    border-radius: 2px;
+    transition: 100ms;
+}
+
+.options-bar-selector select:hover {
+    border: 1px solid lightgray;
+    outline: 1px solid lightgray;
+}

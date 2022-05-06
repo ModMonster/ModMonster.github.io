@@ -1,0 +1,12 @@
+2b3a67 - dark blue
+496a81 - medium blue
+66999b - light blue / teal
+b3af8f - weird apricot / grey
+ffc482 - apricot
+
+e3193d - red
+1667ce - blue
+d99e00 - yellow
+28880b - green
+
+55bc1e - checkbox green

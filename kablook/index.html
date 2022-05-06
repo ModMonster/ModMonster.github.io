@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Kablook!</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/play.css">
+    </head>
+    <body>
+        <div class="join-panel">
+            <h1 class="join-header">Kablook!</h1>
+            <div class="join-name-panel">
+                <form action="/join" method="get">
+                    <input type="text" id="input" name="name" class="input-text" maxlength="12" placeholder="Nickname">
+                    <button class="button join-button">Play</button>
+                    <button class="button help-button" type="button" onclick="help()">?</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
