@@ -264,7 +264,7 @@ section article .content tr td:nth-child(even) {
 }
 
 section article.clickable:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: rgba(0, 0, 0, 0.65);
