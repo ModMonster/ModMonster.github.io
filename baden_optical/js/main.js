@@ -3,7 +3,7 @@ function toggleHours(id, iconId) {
     icon = document.getElementById(iconId);
     table.classList.toggle("hidden");
     icon.classList.toggle("fa-chevron-down");
-    icon.classList.toggle("fa-chevron-left")
+    icon.classList.toggle("fa-chevron-up")
 }
 
 const sections = document.querySelectorAll("section");
